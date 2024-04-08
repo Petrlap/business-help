@@ -258,7 +258,8 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.data__value {
+.data__value,
+.select {
   width: 360px;
   height: 48px;
   border-radius: 3px;
@@ -269,6 +270,10 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
+}
+.select {
+  width: 372px;
+  height: 50px;
 }
 .additional-information {
   width: 1169.5px;
@@ -415,40 +420,64 @@ body {
 }
 
 @media screen and (max-width: 1280px) {
+  body,
+  .main,
+  .background,
+  .container,
+  .scheme,
+  .instruction,
+  .content,
+  .form,
+  .data,
+  .footer {
+    width: 100vw;
+    min-width: 100vw;
+  }
   body {
-    width: 100%;
-    display: table;
+    overflow-x: hidden;
+  }
+  .header__nav {
+    gap: 40px;
   }
   .information {
-    padding: 203px 0 0 175px;
+    width: 500px;
+    padding: 203px 0 0 10%;
+  }
+  .topic {
+    width: 500px;
+    font-size: 38px;
   }
   .dotes {
     display: none;
   }
-  .scheme {
-    width: 1100px;
-  }
-  .instruction {
-    width: 100%;
-  }
   .content {
-    width: 100%;
+    height: 850px;
+    margin-top: 100px;
   }
   .form {
-    width: 100%;
+    height: 430px;
+  }
+  .form__submit {
+    width: 250px;
+  }
+  .document {
+    width: 250px;
   }
   .data {
-    justify-content: space-around;
-  }
-  .data__value {
-    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
   .additional-information {
-    justify-content: space-around;
+    justify-content: center;
+    gap: 25px;
+  }
+  .document {
+    height: 48px;
   }
   .slider {
     width: 400px;
-    white-space: nowrap;
+    gap: 15px;
   }
   .progress {
     width: 400px;
@@ -456,15 +485,130 @@ body {
   .slider__data {
     width: 400px;
   }
+  .vertical-line {
+    display: none;
+  }
   .footer {
-    gap: 20px;
+    height: 80px;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .copyright {
+    order: 1;
   }
 }
 @media screen and (max-width: 768px) {
+  .header,
+  .information,
+  .depiction,
+  .text-box,
+  .text-box__title,
+  .buttons,
+  .additional-information,
+  .header__nav,
+  .text-box__text li {
+    width: 100vw;
+    min-width: 100vw;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  .header {
+    flex-direction: column;
+  }
+  .header__nav {
+    gap: 10px;
+  }
+  .main {
+    height: 700px;
+  }
+  .information {
+    margin: 0;
+    padding: 150px 0 0 0;
+    align-items: center;
+  }
+  .text-box {
+    height: auto;
+    white-space: normal;
+  }
+  .text-box__title {
+    padding: 10px;
+    height: auto;
+    white-space: normal;
+    text-align: center;
+  }
+  .text-box__text {
+    height: 105px;
+    text-align: center;
+  }
+  .text-box__text li {
+    text-align: left;
+    align-items: start;
+    display: flex;
+    justify-content: center;
+  }
+  .text-box__text li::before {
+    top: 0;
+    height: 24px;
+  }
+  .topic {
+    width: 250px;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .depiction {
+    width: 320px;
+    height: 80px;
+  }
+  .depiction__title {
+    text-align: center;
+    font-size: 28px;
+  }
+  .depiction__text {
+    height: auto;
+    text-align: center;
+    white-space: normal;
+  }
+  .buttons {
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .step svg {
+    display: none;
+  }
+  .scheme {
+    flex-direction: column;
+    align-items: center;
+  }
+  .select {
+    width: 252px;
+  }
+  .additional-information {
+    margin: 25px 0 20px 0;
+    height: 120px;
+  }
+  .data__value {
+    width: 240px;
+  }
+  .progress {
+    width: 250px;
+  }
+  .slider {
+    width: 250px;
+    gap: 25px;
+  }
+  .slider__data {
+    width: 250px;
+  }
+  .additional-information {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .footer {
+    height: 140px;
+  }
 }
-/*
-Мобильные устройства:
-
-Маленькие экраны мобильных телефонов (обычно менее 480px в ширину).
-Средние экраны мобильных телефонов (от 480px до 767px в ширину).
-Большие экраны мобильных телефонов (от 768px до 991px в ширину).*/
